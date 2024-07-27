@@ -25,8 +25,7 @@ export class Registry {
     }
   
     getMetrics(): string {
-      // ... [Previous getMetrics code remains unchanged]
-      return '';
+      return Array.from(this.metrics.values()).map(metric => metric.getMetricString()).join('\n');
     }
   
     reset(): void {

@@ -9,7 +9,7 @@
   "scripts": {
     "build1": "tsc",
     "build": "rollup -c",
-    "test": "jest",
+    "test": "jest --coverage",
     "release": "standard-version",
     "prepublishOnly": "npm run build"
   },

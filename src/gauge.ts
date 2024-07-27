@@ -20,4 +20,29 @@ export class Gauge extends Metric {
       const key = this.getLabelsKey(labels);
       return this.labelValues.get(key) || 0;
     }
+/*
+    getMetricString1(): string {
+      let output = `# HELP ${this.name} ${this.help}\n`;
+      output += `# TYPE ${this.name} gauge\n`;
+      for (const [labelHash, value] of this.labelValues) {
+        const labels = labelHash.split('|');
+        const labelString = this.labelNames
+          .map((name, index) => `${name}="${labels[index]}"`)
+          .join(',');
+        output += `${this.name}{${labelString}} ${value}\n`;
+      }
+      return output;
+    }*/
+
+    getMetricString(): string {
+      let output = `# HELP ${this.name} ${this.help}\n`;
+      output += `# TYPE ${this.name} gauge\n`;
+      this.labelValues.forEach((value, labelKey) => {
+        const labels = JSON.parse(labelKey);
+        const labelStr = labels.map((val: string, idx: number) => `${this.labelNames[idx]}="${val}"`).join(',');
+        output += `${this.name}{${labelStr}} ${value}\n`;
+      });
+      return output;
+    }
+    
   }
