@@ -11,7 +11,8 @@
     "build": "rollup -c",
     "test": "jest --coverage",
     "release": "standard-version",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "pack":"npm pack"
   },
   "keywords": [
     "metrics",
