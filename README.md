@@ -5,13 +5,13 @@ A simple metrics package for web applications. Compatible with Angular, React, a
 ## Installation
 
 ```bash
-npm install metrix
+npm install metrica-js
 ```
 
 ## Usage
 
 ```typescript
-import { Counter, Gauge, Histogram, defaultRegistry } from 'metrix';
+import { Counter, Gauge, Histogram, defaultRegistry } from 'metrica-js';
 
 // Create metrics
 const counter = defaultRegistry.registerCounter('http_requests_total', 'Total HTTP requests');
