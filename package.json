@@ -1,5 +1,5 @@
 {
-  "name": "metrix-js",
+  "name": "metrica-js",
   "version": "1.0.3",
   "description": "A simple metrics package for web applications",
   "main": "dist/metrix.cjs.js",
