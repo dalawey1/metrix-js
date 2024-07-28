@@ -1,6 +1,6 @@
 # Your Metrics Package
 
-A simple metrics package for web applications. Compatible with Angular, React, and Vue.
+A simple metrics package for web applications( Compatible with Angular, React and Vue) and Node.
 
 ## Installation
 
