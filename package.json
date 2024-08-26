@@ -1,6 +1,6 @@
 {
   "name": "metrica-js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple metrics package for web applications and Node",
   "main": "dist/metrix.cjs.js",
   "module": "dist/metrix.esm.js",
